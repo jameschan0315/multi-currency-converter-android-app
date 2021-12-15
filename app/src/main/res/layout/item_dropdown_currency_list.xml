@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/item_container"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_56"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:background="@drawable/bg_white_radius"
+    android:layout_marginLeft="@dimen/dp_4"
+    android:layout_marginRight="@dimen/dp_4"
+    android:layout_marginBottom="@dimen/dp_3"
+    android:padding="@dimen/dp_4">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/img_flag"
+        android:layout_width="@dimen/dp_48"
+        android:layout_height="@dimen/dp_48"
+        android:layout_marginLeft="@dimen/dp_8"
+        app:civ_circle_background_color="@android:color/transparent"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_symbol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="@dimen/dp_56"
+        android:layout_marginLeft="@dimen/dp_16"
+        android:layout_gravity="center"
+        android:textStyle="bold"
+        android:text="USD"
+        android:textSize="@dimen/sp_22"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_8"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:text="@string/united_states_dollar"
+        android:textSize="@dimen/sp_16"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/img_star"
+        android:layout_width="@dimen/dp_32"
+        android:layout_height="@dimen/dp_32"
+        android:layout_marginLeft="@dimen/dp_8"
+        android:layout_marginRight="@dimen/dp_8"
+        android:layout_gravity="center_vertical"/>
+
+</LinearLayout>

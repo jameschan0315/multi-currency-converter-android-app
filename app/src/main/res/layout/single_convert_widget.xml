@@ -1,0 +1,193 @@
+<RelativeLayout
+    android:id="@+id/layout_container"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/img_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/bg_pink_round"
+        android:scaleType="fitXY"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/dp_8"
+        android:paddingLeft="@dimen/dp_4"
+        android:paddingRight="@dimen/dp_6"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/img_flag1"
+            android:layout_width="@dimen/dp_42"
+            android:layout_height="@dimen/dp_42"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:id="@+id/txt_symbol1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="USD"
+            android:textSize="@dimen/sp_14"
+            android:layout_gravity="center"
+            android:textColor="@color/white"/>
+
+        <TextView
+            android:id="@+id/txt_slash"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="@dimen/dp_4"
+            android:text="/"
+            android:gravity="center"
+            android:textSize="@dimen/sp_16"
+            android:layout_gravity="center"
+            android:textColor="@color/white"/>
+
+        <ImageView
+            android:id="@+id/img_flag2"
+            android:layout_width="@dimen/dp_42"
+            android:layout_height="@dimen/dp_42"
+            android:layout_marginLeft="@dimen/dp_4"/>
+
+        <TextView
+            android:id="@+id/txt_symbol2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NOK"
+            android:textSize="@dimen/sp_14"
+            android:layout_gravity="center"
+            android:textColor="@color/white"/>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txt_rate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="0.7890"
+                    android:gravity="center"
+                    android:textSize="@dimen/sp_20"
+                    android:textStyle="bold"
+                    android:layout_gravity="center"
+                    android:textColor="@color/white"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.1"/>
+
+                    <TextView
+                        android:id="@+id/txt_percent"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="-0.04%"
+                        android:gravity="left"
+                        android:textSize="@dimen/sp_10"
+                        android:layout_gravity="center"
+                        android:textColor="@color/white"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txt_provider"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingLeft="@dimen/dp_8"
+                android:text="@string/by_currency_wiki"
+                android:gravity="left"
+                android:textSize="@dimen/sp_12"
+                android:layout_gravity="center"
+                android:textColor="@color/white"/>
+
+            <ImageButton
+                android:id="@+id/btn_refresh"
+                android:layout_width="@dimen/dp_24"
+                android:layout_height="@dimen/dp_24"
+                android:padding="@dimen/dp_3"
+                android:background="@drawable/bg_button_ripple"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_baseline_refresh"/>
+
+            <ImageButton
+                android:id="@+id/btn_refresh_dark"
+                android:layout_width="@dimen/dp_24"
+                android:layout_height="@dimen/dp_24"
+                android:padding="@dimen/dp_3"
+                android:background="@drawable/bg_button_ripple_dark"
+                android:visibility="gone"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_baseline_refresh_dark"/>
+            <ProgressBar
+                android:id="@+id/progressWhite"
+                android:layout_width="@dimen/dp_24"
+                android:layout_height="@dimen/dp_24"
+                android:padding="@dimen/dp_4"
+                android:visibility="gone"
+                android:indeterminateTint="@color/white"
+                android:layout_gravity="center"/>
+
+            <ProgressBar
+                android:id="@+id/progressDark"
+                android:layout_width="@dimen/dp_24"
+                android:layout_height="@dimen/dp_24"
+                android:padding="@dimen/dp_4"
+                android:visibility="gone"
+                android:indeterminateTint="#474444"
+                android:layout_gravity="center"/>
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/progrssView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:clickable="true"
+        android:focusable="true">
+        <ProgressBar
+            android:id="@+id/progrssBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:indeterminateTint="@color/white"
+            android:layout_gravity="center"/>
+    </LinearLayout>
+</RelativeLayout>

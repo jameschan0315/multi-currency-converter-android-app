@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/item_container"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@drawable/bg_white_round"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:layout_marginLeft="@dimen/dp_4"
+    android:layout_marginRight="@dimen/dp_4"
+    android:layout_marginBottom="@dimen/dp_3"
+    android:padding="@dimen/dp_4">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/img_flag"
+        android:layout_width="@dimen/dp_48"
+        android:layout_height="@dimen/dp_48"
+        android:layout_marginLeft="@dimen/dp_8"
+        android:layout_gravity="center"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_currency_name"
+        android:layout_width="@dimen/dp_64"
+        android:layout_height="wrap_content"
+        android:minWidth="@dimen/dp_64"
+        android:background="@drawable/bg_pink_round"
+        android:text="EUR"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_16"
+        android:padding="@dimen/dp_8"
+        android:layout_marginLeft="@dimen/dp_4"
+        android:layout_gravity="center_vertical"
+        android:gravity="center"/>
+
+    <com.currencywiki.currencyconverter.common.autofitedittext.AutofitEdittext
+        android:id="@+id/txt_value"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:background="@color/white"
+        android:layout_marginLeft="@dimen/dp_4"
+        android:layout_marginRight="@dimen/dp_4"
+        android:maxLength="50"
+        android:maxLines="1"
+        android:focusableInTouchMode="false"
+        android:gravity="center"
+        android:text="52324.00"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/sp_22"
+        android:textStyle="bold"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="@dimen/dp_32"
+        android:layout_height="@dimen/dp_32"
+        android:layout_marginRight="@dimen/dp_8"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_up_down"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/btn_delete"
+        android:layout_width="@dimen/dp_32"
+        android:layout_height="@dimen/dp_32"
+        android:layout_marginRight="@dimen/dp_16"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_delete"/>
+
+</LinearLayout>

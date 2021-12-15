@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/layout_container"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/bg_pink_gradient">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_configure"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_16"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_28"
+        android:text="@string/configure"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_24"
+        android:layout_marginLeft="@dimen/dp_24"
+        android:layout_marginRight="@dimen/dp_24"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/btn_currency1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:padding="@dimen/dp_8"
+            android:background="@drawable/bg_white_round"
+            android:orientation="horizontal">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/img_symbol1"
+                android:layout_width="@dimen/dp_36"
+                android:layout_height="@dimen/dp_36"
+                android:layout_marginRight="@dimen/dp_12"
+                android:layout_gravity="center"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_symbol1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="EUR"
+                android:textSize="@dimen/sp_24"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/dp_24"
+                android:layout_height="@dimen/dp_24"
+                android:layout_marginRight="@dimen/dp_8"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_drop_down_arrow_gray"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/btn_currency2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:layout_marginLeft="@dimen/dp_24"
+            android:padding="@dimen/dp_8"
+            android:background="@drawable/bg_white_round"
+            android:orientation="horizontal">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/img_symbol2"
+                android:layout_width="@dimen/dp_36"
+                android:layout_height="@dimen/dp_36"
+                android:layout_marginRight="@dimen/dp_12"
+                android:layout_gravity="center"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_symbol2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="USD"
+                android:textSize="@dimen/sp_24"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/dp_24"
+                android:layout_height="@dimen/dp_24"
+                android:layout_marginRight="@dimen/dp_8"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_drop_down_arrow_gray"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/add_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp_16"
+            android:layout_marginRight="@dimen/dp_20"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/white"
+            android:text="@string/add_widget"
+            android:textSize="@dimen/sp_18"/>
+
+        <com.currencywiki.currencyconverter.common.BubbleLayoutTouch
+            android:id="@+id/bubble_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dp_24"
+            android:layout_marginRight="@dimen/dp_24"
+            android:layout_marginBottom="@dimen/dp_8"
+            android:padding="8dp"
+            android:visibility="gone"
+            app:bl_arrowDirection="top"
+            app:bl_arrowHeight="8dp"
+            app:bl_arrowPosition="12dp"
+            app:bl_arrowWidth="8dp"
+            app:bl_bubbleColor="@color/white"
+            app:bl_cornersRadius="8dp">
+
+            <include layout="@layout/layout_currency_select_balloon"/>
+
+        </com.currencywiki.currencyconverter.common.BubbleLayoutTouch>
+
+    </RelativeLayout>
+
+</LinearLayout>

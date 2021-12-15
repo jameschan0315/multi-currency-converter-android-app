@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/top_corners_radius"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="@dimen/dp_120"
+        android:layout_height="@dimen/dp_120"
+        android:layout_gravity="center"
+        android:adjustViewBounds="true"
+        android:padding="@dimen/dp_20"
+        android:layout_marginTop="@dimen/dp_12"
+        android:src="@drawable/ic_logo_multicolor" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_rate_the_app"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textSize="@dimen/sp_26"
+        android:textStyle="bold"
+        android:text="@string/rate_the_app" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_rate_app_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/dp_8"
+        android:gravity="center"
+        android:textSize="@dimen/sp_20"
+        android:text="@string/rate_app_desc" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_20"
+        android:layout_gravity="center">
+
+        <me.zhanghai.android.materialratingbar.MaterialRatingBar
+            android:id="@+id/rate_star"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:maxHeight="@dimen/dp_48"
+            android:minHeight="@dimen/dp_48"
+            app:mrb_progressTint="@color/yellow"
+            app:mrb_secondaryProgressTint="@color/yellow"
+            android:rating="3"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_rate_star"
+            android:background="@android:color/transparent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/rate_star"
+            android:layout_alignBottom="@id/rate_star"
+            android:layout_alignLeft="@id/rate_star"
+            android:layout_alignRight="@id/rate_star"/>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:layout_marginLeft="@dimen/dp_16"
+        android:layout_marginRight="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_20"
+        android:background="@color/gray_5"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/btn_not_now"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textSize="@dimen/sp_24"
+        android:textStyle="bold"
+        android:padding="@dimen/dp_16"
+        android:textAllCaps="true"
+        android:text="@string/not_now"/>
+
+
+</LinearLayout>

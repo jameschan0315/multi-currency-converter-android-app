@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "518769892442",
+    "firebase_url": "https://currency-wiki.firebaseio.com",
+    "project_id": "currency-wiki",
+    "storage_bucket": "currency-wiki.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:518769892442:android:95455e2f35d90701cbcc63",
+        "android_client_info": {
+          "package_name": "com.currencywiki.currencyconverter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "518769892442-ttuf6c2okipsg88c4t4r191jgde1qrdq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBf4E0PGCEFgycKaDBAT8oLOKVcQ5eCdU8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "518769892442-ttuf6c2okipsg88c4t4r191jgde1qrdq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
